@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 在精準農業的應用現況與挑戰：無人機與病蟲害管理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agri: {
+                            deep: '#1e3f20',
+                            primary: '#2e7d32',
+                            light: '#e8f5e9',
+                            accent: '#81c784'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <nav class="bg-agri-deep text-white fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <i class="bi bi-cpu text-agri-accent text-2xl"></i>
+                    <span class="font-bold text-lg tracking-wider">精準農業 4.0 專題</span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#home" class="hover:text-agri-accent transition">首頁摘要</a>
+                    <a href="#findings" class="hover:text-agri-accent transition">研究發現</a>
+                    <a href="#team" class="hover:text-agri-accent transition">團隊成員</a>
+                    <a href="#report" class="hover:text-agri-accent transition">研究報告</a>
+                    <a href="#presentation" class="hover:text-agri-accent transition">成果簡報</a>
+                    <a href="#podcast" class="hover:text-agri-accent transition">Podcast播放</a>
+                    <a href="#video" class="hover:text-agri-accent transition">教學影片</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="pt-28 pb-16 bg-gradient-to-b from-agri-deep to-emerald-900 text-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-agri-accent font-semibold tracking-widest text-xs md:text-sm uppercase mb-3">課程成果發表：人工智慧基礎概念及商管應用</p>
+            <h1 class="text-2xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+                AI 在精準農業的應用現況與挑戰<br class="mt-2 block">
+                <span class="text-agri-accent text-xl md:text-3xl font-medium">— 無人機與病蟲害管理之整合分析報告 —</span>
+            </h1>
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 md:p-8 text-left shadow-2xl border border-white/10">
+                <h3 class="text-lg md:text-xl font-bold mb-3 flex items-center space-x-2 text-agri-accent">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>研究摘要</span>
+                </h3>
+                <p class="text-gray-200 leading-relaxed text-sm md:text-base text-justify">
+                    本研究探討人工智慧 (AI) 與無人飛行載具 (UAV) 整合應用於台灣精準農業之現況，特別聚焦於病蟲害管理與農情調查。隨著台灣農業就業人口從 1978 年的 155 萬人急劇下降至 2022 年的 53.7 萬人，農業面臨嚴重的勞動力短缺與高齡化危機。研究顯示，導入 AI 無人機可將噴藥效率提升 10 至 12 倍，節省 90% 以上的農業用水，並減少 50% 的農藥使用量。透過卷積神經網路 (CNN) 等 AI 演算法，無人機能實現高達 98.56% 的植株定位準確率及 90% 以上的災損判釋率。然而，技術應用仍面臨電池續航力不足、高昂初始成本、複雜法規門檻及 AI 決策即時性等挑戰。本研究建議透過政府政策優化與雲端大數據共享，降低青農入行門檻，達成農業 4.0 之數位轉型目標。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section id="findings" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 flex items-center justify-center space-x-2">
+                <i class="bi bi-lightbulb text-amber-500"></i>
+                <span>研究關鍵發現</span>
+            </h2>
+            <p class="text-gray-500 text-sm mt-2">基於業者深度訪談與數據交叉驗證的核心成果點</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition">
+                <div class="w-12 h-12 rounded-lg bg-agri-light flex items-center justify-center text-agri-primary text-xl font-bold mb-4">1</div>
+                <h4 class="text-lg font-bold mb-2 text-gray-900">AI影像辨識與2公分級精準定位</h4>
+                <p class="text-gray-600 text-sm leading-relaxed text-justify">
+                    結合 CNN 與 NDVI 影像辨識，實現 2 公分級田間超高解析度。水稻秧苗缺株定位準確度高達 98.56%，且倒伏與病害面積判釋率超過 90%，能大幅加速農業保險理賠進程。
+                </p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition">
+                <div class="w-12 h-12 rounded-lg bg-agri-light flex items-center justify-center text-agri-primary text-xl font-bold mb-4">2</div>
+                <h4 class="text-lg font-bold mb-2 text-gray-900">科技降維打擊的資源效率革命</h4>
+                <p class="text-gray-600 text-sm leading-relaxed text-justify">
+                    相較於傳統人工拉管噴藥一公頃需耗時 4 小時，無人機精準代噴僅需 20 分鐘即可完成作業。同時能精準省水 95%、省藥 50%，並使病蟲害防護產量躍升達 20%。
+                </p>
+            </div>
+            <div class="bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition">
+                <div class="w-12 h-12 rounded-lg bg-agri-light flex items-center justify-center text-agri-primary text-xl font-bold mb-4">3</div>
+                <h4 class="text-lg font-bold mb-2 text-gray-900">「無人機代噴+糧商契作」新商模</h4>
+                <p class="text-gray-600 text-sm leading-relaxed text-justify">
+                    新型態商業模式成功串聯了上下游生態鏈。代噴模式免除了農民高昂的無人機設備投資成本，結合糧商契約保障與統購代噴，推動農業管理由經驗密集全面走向知識密集。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-16 bg-agri-light/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 flex items-center justify-center space-x-2">
+                    <i class="bi bi-people text-agri-primary"></i>
+                    <span>研究團隊成員</span>
+                </h2>
+                <p class="text-gray-500 text-sm mt-2">國立屏東科技大學 農企業管理系</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-64 bg-gray-100 overflow-hidden relative">
+                        <img src="assets/member_liu.jpg" alt="劉姿伶" class="w-full h-full object-cover object-center" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center bg-gray-50 text-gray-400\'><i class=\'bi bi-person-fill text-5xl\'></i><span class=\'text-xs mt-2\'>[照片載入中/請確認路徑]</span></div>'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">劉姿伶</h3>
+                        <p class="text-xs text-agri-primary font-semibold mb-4">學號：B11350003</p>
+                        <p class="text-gray-600 text-sm leading-relaxed text-justify flex-1">
+                            大家好，我是國立屏東科技大學農企業管理系二年級A班3號劉姿伶。我做事認真負責且有效率，能細心規劃並耐心完成，也善於團隊合作與溝通協調。在學習過程中，我培養了農企業管理的專業知識，能運用數據分析市場需求與產業趨勢。我擅長將繁雜資訊統整成清楚易懂的圖表與內容。目前我特別關注AI在精準農業的應用，希望透過科技解決台灣農業面臨的人才斷層與勞動力不足的問題。我對無人機施藥、AI影像辨識、大數據分析及智慧農業管理具有濃厚興趣，也關注糧商契作與統購代噴等創新商業模式，期待未來能協助農民提升生產效率、降低成本並推動農業轉型。我相信科技與農業的結合將是未來的重要趨勢，期許自己能運用所學為台灣農業創造更多價值，朝向安全、永續且具國際競爭力的智慧農業發展。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-64 bg-gray-100 overflow-hidden relative">
+                        <img src="assets/member_chen.jpg" alt="陳貞廷" class="w-full h-full object-cover object-center" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center bg-gray-50 text-gray-400\'><i class=\'bi bi-person-fill text-5xl\'></i><span class=\'text-xs mt-2\'>[照片載入中/請確認路徑]</span></div>'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">陳貞廷</h3>
+                        <p class="text-xs text-agri-primary font-semibold mb-4">學號：B11350038</p>
+                        <p class="text-gray-600 text-sm leading-relaxed text-justify flex-1">
+                            目前就讀於屏東科技大學農企業管理系。在校期間除了學習農業經營、行銷管理及產業分析等相關專業知識外，也積極參與課程報告與團隊合作活動，培養溝通協調及問題解決能力。我的個性認真負責，對於交辦的工作都會盡力完成，也樂於接受新的挑戰與學習機會。我認為學習不只是課堂上的知識，更重要的是透過實際參與與經驗累積，提升自己的能力與視野。因此，我經常透過參訪、實作課程及各項活動來增進對農業產業與企業經營的了解。未來希望能將所學知識運用於職場實務，持續精進專業能力與人際溝通技巧，培養獨立思考與團隊合作精神，為自己的職涯發展奠定良好基礎，並朝著成為兼具專業與實務能力的人才目標努力。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-64 bg-gray-100 overflow-hidden relative">
+                        <img src="assets/member_lin.jpg" alt="林承毅" class="w-full h-full object-cover object-center" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center bg-gray-50 text-gray-400\'><i class=\'bi bi-person-fill text-5xl\'></i><span class=\'text-xs mt-2\'>[照片載入中/請確認路徑]</span></div>'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">林承毅</h3>
+                        <p class="text-xs text-agri-primary font-semibold mb-4">學號：B11350072</p>
+                        <p class="text-gray-600 text-sm leading-relaxed text-justify flex-1">
+                            我是一個完全「坐不住」的人。比起待在安靜的辦公桌前，我更熱愛身處在充滿活力的工作現場，在實際動手操作的過程中，深刻感受自己的價值與存在感。我習慣在汗水中找到工作的節奏，過去豐富的實作經驗也磨練出我的獨特優勢。無論是在建築工地中，透過高強度勞動鍛鍊出的精準搬運技巧與空間掌控力；還是在步調緊湊的餐飲業裡，面對長時間站立與高難度操作時，所展現出的強大肌耐力與抗壓性，都證明了我卓越的身體素質與環境適應力。過去的主管曾評價我是團隊中「最有力量且技巧純熟」的夥伴。因為我懂得運用正確的施力方法與工作動線，讓體力發揮出最高產值。我期待能將這份對實作的熱情與純熟技術帶入新團隊，成為最可靠的前線即戰力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="report" class="py-16 max-w-5xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 pb-4 border-b border-gray-200">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center space-x-2">
+                    <i class="bi bi-file-pdf text-red-600"></i>
+                    <span>完整研究報告書</span>
+                </h2>
+                <p class="text-gray-500 text-sm mt-1">完整整合分析報告（支援各種手機與舊瀏覽器直接閱讀）</p>
+            </div>
+            <a href="assets/research_report.pdf" download class="mt-4 md:mt-0 inline-flex items-center space-x-2 bg-agri-primary hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-medium shadow transition text-sm">
+                <i class="bi bi-cloud-arrow-down-fill text-base"></i>
+                <span>下載完整報告 PDF</span>
+            </a>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-[600px] relative">
+            <iframe id="report-iframe" class="w-full h-full" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <section id="presentation" class="py-16 bg-gray-100/60">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 pb-4 border-b border-gray-200">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 flex items-center space-x-2">
+                        <i class="bi bi-easel2 text-orange-600"></i>
+                        <span>專題成果簡報 PPT</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-1">精選 10 頁數據圖表簡報線上閱讀</p>
+                </div>
+                <a href="assets/ppt_presentation.pdf" download class="mt-4 md:mt-0 inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-5 py-2.5 rounded-lg font-medium shadow transition text-sm">
+                    <i class="bi bi-cloud-arrow-down-fill text-base"></i>
+                    <span>下載專題簡報 PDF</span>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-[600px] relative">
+                <iframe id="presentation-iframe" class="w-full h-full" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="podcast" class="py-16 max-w-5xl mx-auto px-4">
+        <div class="bg-gradient-to-r from-emerald-800 to-agri-deep rounded-2xl shadow-xl overflow-hidden text-white p-8 md:p-12">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <div class="space-y-4 max-w-xl">
+                    <span class="bg-agri-accent/20 text-agri-accent text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Audio Media</span>
+                    <h2 class="text-2xl md:text-3xl font-bold flex items-center space-x-3">
+                        <i class="bi bi-mic-fill text-agri-accent"></i>
+                        <span>《科技新農業》空中對談</span>
+                    </h2>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+                        由大學生小林與農業科技專家共同深度對談，用 5 分鐘時間帶您快速聽懂台灣農業危機，以及 AI 無人機如何掀起一場提高 20 倍效率的革命！
+                    </p>
+                    <div class="pt-2">
+                        <audio controls class="w-full max-w-md bg-white/10 rounded-lg p-1 border border-white/10 shadow-inner">
+                            <source src="assets/podcast_audio.mp3" type="audio/mpeg">
+                            您的瀏覽器不支援音訊播放功能，請直接下載逐字稿。
+                        </audio>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 mx-auto lg:mx-0">
+                    <a href="assets/podcast_transcript.pdf" download class="inline-flex flex-col items-center justify-center bg-white text-agri-deep hover:bg-gray-100 w-40 h-40 rounded-2xl shadow-lg transition group">
+                        <i class="bi bi-file-text text-4xl text-agri-primary group-hover:scale-110 transition duration-300 mb-2"></i>
+                        <span class="font-bold text-sm">完整逐字稿</span>
+                        <span class="text-xs text-gray-500 mt-1">PDF 下載</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="py-16 bg-agri-deep text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold flex items-center justify-center space-x-2">
+                    <i class="bi bi-play-btn-fill text-agri-accent"></i>
+                    <span>VideoOverview 成果展示與教學影片</span>
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">點擊即可直接線上觀看核心概念動態導覽</p>
+            </div>
+            <div class="bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video border border-white/10 max-w-4xl mx-auto">
+                <video controls class="w-full h-full object-cover">
+                    <source src="assets/video_overview.mp4" type="video/mp4">
+                    您的瀏覽器不支援 HTML5 影片播放功能。
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-xs border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="text-sm font-semibold text-gray-300">國立屏東科技大學 農企業管理系 — 期末專題成果展示</p>
+            <p>© 2026 國立屏東科技大學 第8組. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href;
+            
+            // 如果是在本機測試 (file:// 或 localhost)，直接讀取相對路徑
+            if (currentUrl.startsWith('file://') || currentUrl.includes('localhost') || currentUrl.includes('127.0.0.1')) {
+                document.getElementById('report-iframe').src = "assets/research_report.pdf";
+                document.getElementById('presentation-iframe').src = "assets/ppt_presentation.pdf";
+            } else {
+                // 如果已經成功部署到 GitHub Pages 線上網址，自動調用微軟萬能高相容預覽服務！
+                const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+                const reportAbsoluteUrl = encodeURIComponent(baseUrl + '/assets/research_report.pdf');
+                const pptAbsoluteUrl = encodeURIComponent(baseUrl + '/assets/ppt_presentation.pdf');
+                
+                document.getElementById('report-iframe').src = `https://view.officeapps.live.com/op/view.aspx?src=${reportAbsoluteUrl}`;
+                document.getElementById('presentation-iframe').src = `https://view.officeapps.live.com/op/view.aspx?src=${pptAbsoluteUrl}`;
+            }
+        });
+    </script>
+</body>
+</html>
